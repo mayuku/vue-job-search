@@ -31,6 +31,7 @@
           />
         </div>
       </div>
+      <subnav-section v-if="isLoggedIn" data-test="subnav" />
     </div>
   </header>
 </template>
@@ -38,12 +39,14 @@
 <script>
 import ActionButton from "@/components/ActionButton.vue";
 import ProfileImage from "@/components/ProfileImage.vue";
+import SubnavSection from "@/components/SubnavSection.vue";
 
 export default {
   name: "MainNav",
   components: {
     ActionButton,
     ProfileImage,
+    SubnavSection,
   },
   data() {
     return {
